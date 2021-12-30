@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Apple</title>
+
+</head>
+
+<body>
+
+	<div>
+		<style>
+			body {
+				margin: 0;
+				width: 100vw;
+				min-height: 100vh;
+			}
+
+			body>div {
+				display: flex;
+				flex-wrap: wrap;
+				width: 600px;
+				margin: 0 auto;
+			}
+
+			.block1 {
+				position: relative;
+				width: 200px;
+				height: 200px;
+				display: inline-block;
+			}
+
+			.block1::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image: url(./apple.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.block1-1::before {
+				transform: rotate(20deg) translate(-15px, -16px);
+				width: 222px;
+				height: 222px;
+			}
+
+			.block1-2::before {
+				transform: rotate(-20deg) translate(-6px, -24px) scale(-1, 1);
+				width: 222px;
+				height: 222px;
+			}
+
+			.block1-3::before {
+				transform: scale(1, -1) rotate(-20deg) translate(-3px, -2px);
+				filter: blur(7px);
+				width: 192px;
+				height: 192px;
+			}
+		</style>
+		<div class="block1 block1-1"></div>
+		<div class="block1 block1-2"></div>
+		<div class="block1 block1-3"></div>
+		<!-- <img src="./apple.png" alt="Red apple"> -->
+	</div>
+</body>
+
+</html>
